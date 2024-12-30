@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILNAIM - Site de Jeux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Titre principal -->
+  <div>
+      <p class="text-overlay"><strong>ILNAIM</strong></p>
+
+  </div>
+
+  <!-- Formulaire d'inscription/connexion -->
+  <div id="login-container">
+    <h1>Bienvenue sur le site de jeux</h1>
+    <div id="form-container">
+      <h2>Inscription</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Nom d'utilisateur" required><br>
+        <input type="password" id="password" placeholder="Mot de passe" required><br>
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Section des jeux -->
+  <div id="game-selection-container" style="display:none;">
+    <h1>Choisissez un jeu</h1>
+    <button onclick="logout()">Se déconnecter</button>
+    <div id="games" class="game-grid">
+      <!-- Jeu 1 -->
+      <div class="game-item" onclick="window.location.href = './game1/game1.html'">
+        <img src="./images/image1.jpg" alt="Tic Tac Toe">
+      </div>
+      <!-- Jeu 2 -->
+      <div class="game-item" onclick="window.location.href = './game2/game2.html'">
+        <img src="./images/image2.png" alt="Jeu 2">
+      </div>
+      <!-- Jeu 3 -->
+      <div class="game-item" onclick="window.location.href = './game3/game3.html'">
+        <img src="images/image3.jpg" alt="Jeu 3">
+      </div>
+      <!-- Jeu 4 -->
+      <div class="game-item" onclick="window.location.href = './game4/game4.html'">
+        <img src="placeholder4.png" alt="Jeu 4">
+      </div>
+      <!-- Jeu 5 -->
+      <div class="game-item" onclick="startGame(5)">
+        <img src="placeholder5.png" alt="Jeu 5">
+      </div>
+      <!-- Jeu 6 -->
+      <div class="game-item" onclick="startGame(6)">
+        <img src="placeholder6.png" alt="Jeu 6">
+      </div>
+      <!-- Jeu 7 -->
+      <div class="game-item" onclick="startGame(7)">
+        <img src="placeholder7.png" alt="Jeu 7">
+      </div>
+      <!-- Jeu 8 -->
+      <div class="game-item" onclick="startGame(8)">
+        <img src="placeholder8.png" alt="Jeu 8">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

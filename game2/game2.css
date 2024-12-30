@@ -1,0 +1,89 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #220482, #660756);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Titre et Score */
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+  }
+  
+  #score-container {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  #score {
+    font-weight: bold;
+    color: #f9a825;
+  }
+  
+  #time-left {
+    color: #ffeb3b;
+  }
+  
+  /* Conteneur du jeu */
+  #game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  
+  .hole {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .hole .mole {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('mole.jpeg');
+    background-size: cover;
+    bottom: -100%;
+    transition: bottom 0.5s ease;
+  }
+  
+  /* Animation de la taupe */
+  .mole.active {
+    bottom: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+.bg{
+    background-color:whitesmoke;
+  }

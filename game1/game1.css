@@ -1,0 +1,101 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #220482, #660756);
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Conteneur du jeu */
+#tic-tac-toe {
+  text-align: center;
+}
+
+#tic-tac-toe h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Plateau de jeu */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* Message */
+#message-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none; /* Désactive l'interaction */
+}
+
+.message {
+  font-size: 4em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff;
+  animation: fadeInBounce 2s ease-out;
+  opacity: 0;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Bouton de réinitialisation */
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+

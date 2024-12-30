@@ -1,0 +1,255 @@
+/* Corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #220482, #660756);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-size:400% 400%;
+  animation:bg 6s ease infinite;
+    }
+  @keyframes bg{  
+  0%{
+    background-position: 0% 50%;
+    }
+    50%{
+    background-position: 100% 100%;
+    }
+    100%{
+    background-position: 0% 50%;
+    }
+    }
+  
+/* Titre principal */
+#site-title {
+  text-align: center;
+  margin: 20px 0;
+  
+}
+
+#site-title p {
+  font-size: 150px;
+  font-weight: bold;
+  margin: 0;
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Formulaire d'inscription/connexion */
+#login-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#auth-form input {
+  padding: 15px;
+  margin: 10px 0;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#auth-form button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#auth-form button:hover {
+  background-color: #45a049;
+}
+
+/* Grille des jeux */
+#games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 40px ;
+}
+
+.game-item {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color:transparent; /* Couleur de fond par défaut si l'image est manquante */
+}
+
+.game-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+  #games {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game-item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #games {
+    grid-template-columns: 1fr;
+  }
+
+  .game-item {
+    width: 90%;
+    height: 180px;
+  }
+}
+
+#auth-form input {
+  padding: 15px;
+  margin: 10px 0;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#auth-form button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #a24893;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#auth-form button:hover {
+  background-color: #b01596;
+}
+
+/* Grille des jeux */
+#games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.game-item {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+  #games {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game-item {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #games {
+    grid-template-columns: 1fr;
+  }
+
+  .game-item {
+    width: 90%;
+    height: 180px;
+  }
+}
+
+
+#site-title{
+  border:white solid 5px ;
+  
+  border-radius: 50px;
+}
+.image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 0%;
+}
+
+.image-container img {
+  width: 100%;
+  height:400px;
+}
+
+.text-overlay {
+  font-size: 165px;
+  margin: 20px 0;
+  color: rgb(244, 158, 234);
+  text-shadow: 0 0 10px rgb(146, 43, 125), 0 0 20px rgb(135, 44, 127);
+  animation: CMOD by/Exploit 5s linear infinite alternate;
+@keyframesCMOD by/Exploit{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+}
+
+
+#game-selection-container button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #860d80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#game-selection-container button:hover {
+  background-color: #700b6b;
+}
+
