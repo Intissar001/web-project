@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: white;
-  background-size:400% 400%;
+  background-size:200% 200%;
   animation:bg 6s ease infinite;
     }
   @keyframes bg{  
@@ -16,7 +16,7 @@ body {
     background-position: 0% 50%;
     }
     50%{
-    background-position: 100% 100%;
+    background-position: 100% 50%;
     }
     100%{
     background-position: 0% 50%;
@@ -222,23 +222,34 @@ body {
   height:400px;
 }
 
-.text-overlay {
-  font-size: 165px;
-  margin: 20px 0;
-  color: rgb(244, 158, 234);
-  text-shadow: 0 0 10px rgb(146, 43, 125), 0 0 20px rgb(135, 44, 127);
-  animation: CMOD by/Exploit 5s linear infinite alternate;
-@keyframesCMOD by/Exploit{
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
+.text-overlay {
+  font-size: 10vw;
+  margin: 20px 0;
+  color: rgb(244, 158, 234);
+  text-shadow: 0 0 10px rgb(146, 43, 125), 0 0 20px rgb(135, 44, 127);
+  animation: pulse 2s infinite ease-in-out; /* Ajout de l'animation */
+  text-align: center;
+  word-wrap: break-word;
+}
+
+
 
 #game-selection-container button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: fixed; /* Rend le bouton toujours visible dans la fenêtre */
+  top: 10px; /* Ajusté pour une meilleure position */
+  right: 10px; /* Ajusté pour une meilleure position */
   padding: 10px 20px;
   font-size: 1em;
   background-color: #860d80;
@@ -247,9 +258,32 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 1000; /* S'assure qu'il est au-dessus des autres éléments */
 }
 
 #game-selection-container button:hover {
   background-color: #700b6b;
 }
 
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 15vw; /* Réduction pour les tablettes */
+  }
+
+  #game-selection-container button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    font-size: 20vw; /* Réduction pour les téléphones */
+  }
+
+  #game-selection-container button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
