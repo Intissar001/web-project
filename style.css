@@ -236,6 +236,7 @@ body {
 
 .text-overlay {
   font-size: 10vw;
+  margin-top: 50px;
   margin: 20px 0;
   color: rgb(244, 158, 234);
   text-shadow: 0 0 10px rgb(146, 43, 125), 0 0 20px rgb(135, 44, 127);
