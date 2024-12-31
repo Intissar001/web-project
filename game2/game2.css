@@ -71,19 +71,17 @@ body {
   }
   
   button {
+    margin-left: 60px;
     padding: 10px 20px;
     font-size: 1.5em;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #b01596;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   button:hover {
-    background-color: #45a049;
-  }
-.bg{
-    background-color:whitesmoke;
+    background-color: #ce2db3;
   }

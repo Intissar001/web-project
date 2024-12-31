@@ -49,3 +49,21 @@ body {
     pointer-events: none;
   }
   
+
+#restartButton{
+  padding: 10px;
+  margin-top: 10px;
+  padding-left:20px ;
+  padding-right:20px ;
+  font-size: 1em;
+  background-color: #860d80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+#restartButton:hover {
+  background-color: #700b6b;
+}

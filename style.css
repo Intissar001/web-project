@@ -1,7 +1,7 @@
 /* Corps de la page */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #220482, #660756);
+  background: linear-gradient(135deg, #220482, #a10f89);
   margin: 0;
   padding: 0;
   display: flex;
@@ -222,45 +222,61 @@ body {
   height:400px;
 }
 
-@keyframes pulse {
+
+
+@keyframes glow {
   0% {
-    transform: scale(1);
+    text-shadow: 0 0 5px rgb(146, 43, 125), 0 0 10px rgb(135, 44, 127);
   }
   50% {
-    transform: scale(1.1);
+    text-shadow: 0 0 20px rgb(244, 158, 234), 0 0 30px rgb(135, 44, 127);
   }
   100% {
-    transform: scale(1);
+    text-shadow: 0 0 5px rgb(146, 43, 125), 0 0 10px rgb(135, 44, 127);
   }
 }
 
 .text-overlay {
   font-size: 10vw;
-  margin-top: 50px;
   margin: 20px 0;
   color: rgb(244, 158, 234);
-  text-shadow: 0 0 10px rgb(146, 43, 125), 0 0 20px rgb(135, 44, 127);
-  animation: pulse 2s infinite ease-in-out; /* Ajout de l'animation */
+  margin-top: 50px;
+  animation: glow 3s infinite ease-in-out; /* Ajout de l'animation */
   text-align: center;
   word-wrap: break-word;
 }
-
+#game-selection-container{
+  margin-top: 80px;
+}
 
 
 #game-selection-container button {
-  position: fixed; /* Rend le bouton toujours visible dans la fenêtre */
+  position: absolute; /* Rend le bouton toujours visible dans la fenêtre */
   top: 10px; /* Ajusté pour une meilleure position */
   right: 10px; /* Ajusté pour une meilleure position */
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #860d80;
+  background: linear-gradient(135deg, #a10f89, #220482);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 1000; /* S'assure qu'il est au-dessus des autres éléments */
-}
+  background-size:200% 200%;
+  animation:bg 6s ease infinite;
+  }
+@keyframes bg{  
+0%{
+  background-position: 0% 50%;
+  }
+  50%{
+  background-position: 100% 50%;
+  }
+  100%{
+  background-position: 0% 50%;
+  }
+  }
 
 #game-selection-container button:hover {
   background-color: #700b6b;
