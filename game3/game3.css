@@ -25,15 +25,13 @@ h1 {
 }
 
 .card {
-  width: 100%; /* S'adapte à la largeur de la colonne */
-  height: 0;
-  padding-bottom: 100%; /* Assure un carré */
+  width: 100px;
+  height: 100px;
   background-color: #a01699;
   color: white;
   display: flex;
-  align-items: center; /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  text-align: center; /* Centre le texte à l'intérieur */
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 8px;
