@@ -55,6 +55,8 @@ h1 {
 
 #restartButton {
   padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-top: 20px;
   font-size: 1em;
   background-color: #860d80;

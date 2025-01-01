@@ -13,7 +13,7 @@ body {
     overflow: hidden;
   }
   
-  /* Titre et Score */
+  
   h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -34,7 +34,7 @@ body {
     color: #ffeb3b;
   }
   
-  /* Conteneur du jeu */
+
   #game-container {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -65,15 +65,14 @@ body {
     transition: bottom 0.5s ease;
   }
   
-  /* Animation de la taupe */
   .mole.active {
     bottom: 0;
   }
   
   button {
-    margin-left: 60px;
+    margin-left: 80px;
     padding: 10px 20px;
-    font-size: 1.5em;
+    font-size: 1em;
     border: none;
     border-radius: 5px;
     background-color: #b01596;
