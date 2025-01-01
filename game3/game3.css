@@ -1,60 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #220482, #660756);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  .game-container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-  }
-  
-  .card {
-    width: 100px;
-    height: 100px;
-    background-color: #a01699;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    cursor: pointer;
-    border-radius: 8px;
-    user-select: none;
-    transform: scale(1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
-  
-  .card.flip {
-    background-color: #fff;
-    color: #000;
-    cursor: default;
-    transform: scale(1.1);
-  }
-  
-  .card.matched {
-    background-color: #6b16cb;
-    color: white;
-    pointer-events: none;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #220482, #660756);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
 
-#restartButton{
+h1 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Toujours 4 colonnes */
+  gap: 10px;
+  width: 90%; /* Largeur adaptable */
+  max-width: 450px; /* Limite pour les grands écrans */
+}
+
+.card {
+  width: 100%; /* S'adapte à la largeur de la colonne */
+  height: 0;
+  padding-bottom: 100%; /* Assure un carré */
+  background-color: #a01699;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  user-select: none;
+  transform: scale(1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card.flip {
+  background-color: #fff;
+  color: #000;
+  cursor: default;
+  transform: scale(1.1);
+}
+
+.card.matched {
+  background-color: #6b16cb;
+  color: white;
+  pointer-events: none;
+}
+
+#restartButton {
   padding: 10px;
-  margin-top: 10px;
-  padding-left:20px ;
-  padding-right:20px ;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 1em;
   background-color: #860d80;
   color: white;
@@ -64,6 +68,23 @@ body {
   transition: background-color 0.3s ease;
   z-index: 1000;
 }
+
 #restartButton:hover {
   background-color: #700b6b;
+}
+
+/* Media query pour petits écrans */
+@media (max-width: 600px) {
+  .game-container {
+    width: 100%; /* Prend toute la largeur de l'écran */
+    max-width: none; /* Supprime la limite pour petits écrans */
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .card {
+    font-size: 1.5rem; /* Réduit la taille du texte dans les cartes */
+  }
 }
