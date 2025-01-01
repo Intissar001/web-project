@@ -19,8 +19,8 @@
     <div id="form-container">
       <h2>Inscription</h2>
       <form id="auth-form">
-        <input type="text" id="username" placeholder="Nom d'utilisateur" required><br>
-        <input type="password" id="password" placeholder="Mot de passe" required><br>
+        <input type="text" id="username" placeholder="Nom d'utilisateur"  pattern="[a-zA-Z0-9_]{3,15}"  title="Le nom d'utilisateur doit contenir entre 3 et 15 caractères : lettres, chiffres ou tirets bas (_)." required><br>
+        <input type="password" id="password" placeholder="Mot de passe" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"  title="Le mot de passe doit contenir au moins 8 caractères, avec une majuscule, une minuscule, un chiffre et un caractère spécial." required><br>
         <button type="submit">Se connecter</button>
       </form>
     </div>
