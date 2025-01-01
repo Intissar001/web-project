@@ -4,6 +4,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  height: 100vh;
   color: white;
 }
 
@@ -57,7 +58,7 @@ button {
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
 
