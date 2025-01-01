@@ -31,8 +31,9 @@ h1 {
   background-color: #a01699;
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte à l'intérieur */
   font-size: 2rem;
   cursor: pointer;
   border-radius: 8px;
@@ -40,6 +41,7 @@ h1 {
   transform: scale(1);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 
 .card.flip {
   background-color: #fff;
